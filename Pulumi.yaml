@@ -1,0 +1,14 @@
+name: python-component-test-yaml
+description: A minimal Pulumi YAML program
+runtime: yaml
+variables: {}
+resources:
+  loader:
+    type: gcp-data:index:BigQueryLoader
+    properties:
+      fileLocationUri: "gs://mybucket/myfile.csv"
+      schema: '[{"name": "foo", "type": "STRING", "mode": "NULLABLE"}, {"name": "bar", "type": "STRING", "mode": "NULLABLE"}]'
+outputs:
+  datasetId: ${loader.datasetId}
+  tableId: ${loader.tableId}
+  jobId: ${loader.jobId}

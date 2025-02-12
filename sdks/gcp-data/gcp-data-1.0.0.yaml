@@ -1,0 +1,4 @@
+packageDeclarationVersion: 1
+name: gcp-data
+version: 1.0.0
+downloadUrl: git://github.com/pulumi-initech/python-bigquery-loader.git
